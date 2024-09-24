@@ -53,11 +53,10 @@ function Home() {
           </div>
           <div className="mt-8">
             <motion.div
-              variants={smoothIn("left", 0.3)}
+              variants={smoothIn("up", 0.3)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              transition={{ duration: 1, ease: "easeInOut" }}
               className="w-full h-full flex justify-center"
             >
               <IndexImg />
