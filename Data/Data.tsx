@@ -6,14 +6,14 @@ import {
 } from "@/Types";
 
 import {
-  BsFillTaxiFrontFill,
+  BsFillBuildingsFill,
   BsBriefcaseFill,
-  BsTelephoneInboundFill,
+  BsFillBoxFill,
   BsStarFill,
-  BsAirplaneFill,
-  BsFillCarFrontFill,
-  BsFillPinMapFill,
-  BsFillSendCheckFill,
+  BsFillClipboard2DataFill,
+  BsFillCloudSunFill,
+  BsFillChatRightHeartFill,
+  BsFillFlagFill,
 } from "react-icons/bs";
 
 const navLinks: NavLink[] = [
@@ -32,10 +32,6 @@ const navLinks: NavLink[] = [
   {
     label: "Servicios",
     path: "/service",
-  },
-  {
-    label: "Galeria",
-    path: "/gallery",
   },
   {
     label: "Contacto",
@@ -112,59 +108,59 @@ const products: ProductProps[] = [
 const services: ServiceProps[] = [
   {
     id: 1,
-    title: "Car Rental with Driver",
+    title: "Empresa",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsFillTaxiFrontFill />,
+    icon: <BsFillBuildingsFill />,
   },
   {
     id: 2,
-    title: "Business Car Rental",
+    title: "Transparencia",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     icon: <BsBriefcaseFill />,
   },
   {
     id: 3,
-    title: "Airpot Transportation",
+    title: "Compromiso",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsAirplaneFill />,
+    icon: <BsFillClipboard2DataFill />,
   },
   {
     id: 4,
-    title: "Chauffeur Side Services",
+    title: "Mision",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsFillSendCheckFill />,
+    icon: <BsFillFlagFill />,
   },
   {
     id: 5,
-    title: "VIP Luxory Transportation",
+    title: "Calidad",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     icon: <BsStarFill />,
   },
   {
     id: 6,
-    title: "Private Transportation",
+    title: "Ambiental",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsFillCarFrontFill />,
+    icon: <BsFillCloudSunFill />,
   },
   {
     id: 7,
-    title: "Roadside Asistant Services",
+    title: "Seguridad",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsFillPinMapFill />,
+    icon: <BsFillBoxFill />,
   },
   {
     id: 8,
-    title: "Event Transportation",
+    title: "Satisfacción",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias pariatur fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: <BsTelephoneInboundFill />,
+    icon: <BsFillChatRightHeartFill />,
   },
 ];
 
