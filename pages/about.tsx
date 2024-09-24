@@ -20,21 +20,24 @@ export default function About() {
   const imageVariants1 = {
     show: {
       opacity: 1,
-      y: 0,
+      y: 180,
+      x:140,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
         delay: 0.5,
       },
     },
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 230,
+      x:140
     },
   };
   const imageVariants2 = {
     show: {
       opacity: 1,
       y: 0,
+      x:160,
       transition: {
         duration: 0.8,
         delay: 0.2,
@@ -43,13 +46,13 @@ export default function About() {
     hidden: {
       opacity: 0,
       y: 50,
-      x: -10,
+      x:160,
     },
   };
   const imageVariants3 = {
     show: {
       opacity: 1,
-      y: -50,
+      y: 90,
       transition: {
         duration: 1,
         delay: 0.2,
@@ -57,8 +60,7 @@ export default function About() {
     },
     hidden: {
       opacity: 0,
-      y: 30,
-      x: -10,
+      y: 140,
     },
   };
   return (
@@ -74,7 +76,7 @@ export default function About() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="absolute w-[10rem] bottom-0 -translate-y-0 left-1/2"
+              className="absolute w-[10rem]"
             >
               <Image
                 src={"/about_1.png"}
@@ -89,7 +91,7 @@ export default function About() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="absolute w-[10rem] top-0 -translate-y-0 left-1/2"
+              className="absolute w-[10rem]"
             >
               <Image
                 src={"/about_2.png"}
@@ -104,7 +106,7 @@ export default function About() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="absolute w-[10rem] top-2/4 -translate-y-2/4"
+              className="absolute w-[10rem]"
             >
               <Image
                 src={"/about_3.png"}
