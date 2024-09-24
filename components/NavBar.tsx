@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { navLinks } from "@/Data/data";
+import { navLinks } from "@/Data/dataLinks";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
