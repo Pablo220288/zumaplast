@@ -118,7 +118,7 @@ export default function About() {
             </motion.div>
           </div>
           <motion.div
-            variants={smoothIn("left", 0)}
+            variants={smoothIn("down", 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
