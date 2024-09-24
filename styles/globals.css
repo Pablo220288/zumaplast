@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply leading-relaxed;
+    @apply leading-relaxed overflow-x-hidden;
   }
   .page {
     @apply w-full h-screen;

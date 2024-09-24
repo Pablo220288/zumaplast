@@ -3,8 +3,9 @@ import Wrapper from "@/components/Wrapper";
 import Head from "next/head";
 import React from "react";
 
+//Framer Motion
 import { motion } from "framer-motion";
-import { smoothIn } from "../animate";
+import { smoothIn } from "@/animate";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
         <div className="h-full">
           <div>
             <motion.h1
-              variants={smoothIn("down", 0.2)}
+              variants={smoothIn("down", 0)}
               initial="hidden"
               animate="show"
               exit="hidden"
@@ -26,7 +27,7 @@ function Home() {
               Zumaplast
             </motion.h1>
             <motion.p
-              variants={smoothIn("down", 0.2)}
+              variants={smoothIn("down", 0)}
               initial="hidden"
               animate="show"
               exit="hidden"
@@ -36,7 +37,7 @@ function Home() {
               nemo molestias pariatur fuga?
             </motion.p>
             <motion.div
-              variants={smoothIn("down", 0.6)}
+              variants={smoothIn("up", 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
@@ -50,12 +51,13 @@ function Home() {
               </button>
             </motion.div>
           </div>
-          <div className="mt-5">
+          <div className="mt-8">
             <motion.div
-              variants={smoothIn("up", 0.6)}
+              variants={smoothIn("left", 0.3)}
               initial="hidden"
               animate="show"
               exit="hidden"
+              transition={{ duration: 1, ease: "easeInOut" }}
               className="w-full h-full flex justify-center"
             >
               <IndexImg />

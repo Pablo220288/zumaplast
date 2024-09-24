@@ -1,10 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { navLinks } from "@/Data/dataLinks";
+import { navLinks } from "@/Data/Data";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+
+import {
+  IoLogoWhatsapp,
+  IoLogoInstagram,
+  IoLogoFacebook,
+} from "react-icons/io";
+import Image from "next/image";
 
 export default function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
@@ -40,10 +47,12 @@ export default function NavBar() {
     },
   };
 
+  const socialIconsMobile = "text-3xl  cursor-pointer text-White";
+
   const isActive = (path: string) =>
     pathname === path ? "text-Red" : "text-Black";
   const isActiveMobile = (path: string) =>
-    pathname === path ? "text-Red" : "text-White";
+    pathname === path ? "text-Red drop-shadow-lg" : "text-White";
 
   return (
     <header className="fixed z-50 w-full top-0 left-0">
@@ -54,7 +63,7 @@ export default function NavBar() {
       >
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-3xl text-Black">
-            Zumaplast
+            <Image className="w-[7rem]" src={"/zumaplast_logo_xl.png"} alt="Logo" width={1080} height={1080} />
           </Link>
           <div className="hidden md:flex items-center justify-center space-x-6">
             {navLinks.map((link) => (
@@ -103,6 +112,26 @@ export default function NavBar() {
             {link.label}
           </Link>
         ))}
+
+        <div className="mt-6 flex justify-center items-center flex-row gap-4">
+          <Link className={socialIconsMobile} href="#" target="_blank">
+            <IoLogoWhatsapp />
+          </Link>
+          <Link
+            className={socialIconsMobile}
+            href="https://www.instagram.com/zumaplast/"
+            target="_blank"
+          >
+            <IoLogoInstagram />
+          </Link>
+          <Link
+            className={socialIconsMobile}
+            href="https://www.facebook.com"
+            target="_blank"
+          >
+            <IoLogoFacebook />
+          </Link>
+        </div>
         <HiX
           onClick={(prev) => setOpen(!prev)}
           className="absolute text-White top-11 right-5 cursor-pointer w-6 h-6"

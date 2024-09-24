@@ -7,9 +7,9 @@ export default function IndexImg() {
       <Image
         src={"/home.png"}
         alt="Descartables Varios"
-        width={2548}
-        height={1893}
-        className="trasnslate-z-0 w-[18rem] h-full"
+        width={1364}
+        height={910}
+        className="trasnslate-z-0 w-[26rem] h-full"
       />
     </div>
   );
