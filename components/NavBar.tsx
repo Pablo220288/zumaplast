@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { navLinks } from "@/Data/Data";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
@@ -15,6 +15,7 @@ import Image from "next/image";
 
 export default function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
   const router = useRouter();
   const pathname = router.pathname;
 
@@ -49,13 +50,33 @@ export default function NavBar() {
 
   const socialIconsMobile = "text-3xl  cursor-pointer text-White";
 
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const isActive = (path: string) =>
     pathname === path ? "text-Red" : "text-Black";
   const isActiveMobile = (path: string) =>
     pathname === path ? "text-Red drop-shadow-lg" : "text-White";
 
   return (
-    <header className="fixed z-50 w-full top-0 left-0">
+    <header
+      className={`fixed z-50 w-full top-0 left-0 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
       <nav
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
           open ? "hidden" : ""
@@ -63,7 +84,7 @@ export default function NavBar() {
       >
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-3xl text-Black">
-            <Image className="w-[7rem]" src={"/zumaplast_logo_xl.png"} alt="Logo" width={1080} height={1080} />
+            ZeroPlast
           </Link>
           <div className="hidden md:flex items-center justify-center space-x-6">
             {navLinks.map((link) => (
@@ -86,14 +107,12 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-
       <motion.div
         variants={menuVariants}
         initial="closed"
         animate={open ? "open" : "closed"}
         className="bg-Blue fixed top-0 right-0 w-16 h-16 rounded-full"
       ></motion.div>
-
       <motion.nav
         variants={navLinkVariants}
         initial="closed"
@@ -119,7 +138,7 @@ export default function NavBar() {
           </Link>
           <Link
             className={socialIconsMobile}
-            href="https://www.instagram.com/zumaplast/"
+            href="https://www.instagram.com"
             target="_blank"
           >
             <IoLogoInstagram />

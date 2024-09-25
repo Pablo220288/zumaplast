@@ -28,7 +28,18 @@ type ProductProps = {
   detail: string[];
 };
 
+type CardProductProps = {
+  children: React.ReactNode;
+}
+
 type ServiceProps = {
+  id: number;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+};
+
+type ContactProps = {
   id: number;
   title: string;
   description: string;
@@ -41,5 +52,7 @@ export {
   CountUpProps,
   countUpItemsProps,
   ProductProps,
+  CardProductProps,
   ServiceProps,
+  ContactProps,
 };

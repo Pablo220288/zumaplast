@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           initial="initialState"
           animate="animateState"
           exit="exitState"
-          transition={{ duration: 0.75 }}
+          transition={{ duration: 0.3 }}
           variants={{
             initialState: {
               opacity: 0,

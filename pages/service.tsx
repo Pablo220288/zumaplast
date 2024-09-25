@@ -11,7 +11,7 @@ export default function Service() {
   return (
     <>
       <Head>
-        <title>Zumaplast | Servicios</title>
+        <title>ZeroPlast | Servicios</title>
       </Head>
       <Wrapper className="flex felx-col mt-24 justify-center items-center">
         <div className="h-full">

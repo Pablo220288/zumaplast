@@ -1,18 +1,38 @@
 import Wrapper from "@/components/Wrapper";
 import Head from "next/head";
-import React from "react";
+import React, { useRef } from "react";
 import { products } from "@/Data/Data";
 import Image from "next/image";
 
-//Framer Motion
-import { motion } from "framer-motion";
+// Framer Motion
+import { motion, useInView } from "framer-motion";
 import { smoothIn } from "@/animate";
+import { CardProductProps } from "@/Types";
+
+function Product({ children }: CardProductProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px 200px 0px" });
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+      className="bg-WhiteGray p-10"
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Products() {
   return (
     <>
       <Head>
-        <title>Zumaplast |Products</title>
+        <title>ZeroPlast | Products</title>
       </Head>
       <Wrapper>
         <div className="flex flex-col pt-40 items-center text-center">
@@ -37,16 +57,9 @@ export default function Products() {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={smoothIn("right", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 px-4 md:px-8"
-          >
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 px-4 md:px-8">
             {products.map((product) => (
-              <div key={product.id} className="bg-WhiteGray p-10 ">
+              <Product key={product.id}>
                 <div className="w-full relative group flex justify-center">
                   <Image
                     className="w-[10rem]"
@@ -72,7 +85,7 @@ export default function Products() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Product>
             ))}
           </motion.div>
         </div>

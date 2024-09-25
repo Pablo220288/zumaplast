@@ -66,7 +66,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>ZumaPlast | Sobre Nosotros</title>
+        <title>ZeroPlast | Sobre Nosotros</title>
       </Head>
       <Wrapper className="pb-0 mt-20 lg:mt-0">
         <div className="flex flex-col gap-12 items-center justify-center min-h-screen lg:flex-row mb-12 lg:mb-0">

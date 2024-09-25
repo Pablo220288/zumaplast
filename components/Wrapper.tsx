@@ -36,7 +36,7 @@ export default function Wrapper({ className, children }: WrapperProps) {
         >
           <Link
             className={socialIconsDesktop}
-            href="https://www.instagram.com/zumaplast/"
+            href="https://www.instagram.com"
             target="_blank"
           >
             <IoLogoInstagram />

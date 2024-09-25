@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>ZumaPlast</title>
+        <title>ZeroPlast | Home</title>
       </Head>
       <Wrapper className="text-center flex flex-col justify-center pb-0">
         <div className="bg-[#fbe2e3] absolute top-[6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
@@ -24,7 +24,7 @@ function Home() {
               animate="show"
               exit="hidden"
             >
-              Zumaplast
+              ZeroPlast
             </motion.h1>
             <motion.p
               variants={smoothIn("down", 0)}

@@ -3,6 +3,7 @@ import {
   NavLink,
   ProductProps,
   ServiceProps,
+  ContactProps,
 } from "@/Types";
 
 import {
@@ -14,6 +15,9 @@ import {
   BsFillCloudSunFill,
   BsFillChatRightHeartFill,
   BsFillFlagFill,
+  BsFillHouseFill,
+  BsFillPhoneFill,
+  BsFillEnvelopeFill,
 } from "react-icons/bs";
 
 const navLinks: NavLink[] = [
@@ -80,7 +84,7 @@ const products: ProductProps[] = [
     detail: ["+ Ver Mas", "Contacto"],
   },
   {
-    id: 1,
+    id: 3,
     name: "Caja Papas",
     image: "/product3.png",
     description:
@@ -88,7 +92,7 @@ const products: ProductProps[] = [
     detail: ["+ Ver Mas", "Contacto"],
   },
   {
-    id: 1,
+    id: 4,
     name: "Caja Pizza",
     image: "/product4.png",
     description:
@@ -96,7 +100,7 @@ const products: ProductProps[] = [
     detail: ["+ Ver Mas", "Contacto"],
   },
   {
-    id: 1,
+    id: 5,
     name: "Caja Triangular",
     image: "/product5.png",
     description:
@@ -164,4 +168,25 @@ const services: ServiceProps[] = [
   },
 ];
 
-export { navLinks, countUpItems, products, services };
+const contacts: ContactProps[] = [
+  {
+    id: 1,
+    title: "Address",
+    description: "School Street, 1st Avenue, New York, USA",
+    icon: <BsFillHouseFill />,
+  },
+  {
+    id: 2,
+    title: "Phone",
+    description: "+1 5589 55488 55",
+    icon: <BsFillPhoneFill />,
+  },
+  {
+    id: 3,
+    title: "Email",
+    description: "Jxw2n@example.com",
+    icon: <BsFillEnvelopeFill />,
+  },
+];
+
+export { navLinks, countUpItems, products, services, contacts };
