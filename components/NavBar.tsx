@@ -11,7 +11,6 @@ import {
   IoLogoInstagram,
   IoLogoFacebook,
 } from "react-icons/io";
-import Image from "next/image";
 
 export default function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
